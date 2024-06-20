@@ -119,7 +119,10 @@ const Header = () => {
                         >
                           Behance <span>Pro</span>
                         </a>
-                        <span className="mx-3 text-gray-300 font-small text-xl"> | </span>
+                        <span className="mx-3 text-gray-300 font-small text-xl">
+                          {" "}
+                          |{" "}
+                        </span>
                       </li>
                       <li className="font-medium text-md active">
                         <HeaderDropdown
@@ -190,7 +193,18 @@ const Header = () => {
                 </div>
                 <div className="sort mx-2 py-1 px-6 rounded-full border  border-[#dee8ff] hover:bg-[#f9f9f9] text-sm font-medium">
                   Sort
-                  <HeaderDropdown type1={["Recommended","Curated","Most Appreciated","Most Viewed","Most Discussed","Most Recent"]} type2={[]} value={"Recommended"}></HeaderDropdown>
+                  <HeaderDropdown
+                    type1={[
+                      "Recommended",
+                      "Curated",
+                      "Most Appreciated",
+                      "Most Viewed",
+                      "Most Discussed",
+                      "Most Recent",
+                    ]}
+                    type2={[]}
+                    value={"Recommended"}
+                  ></HeaderDropdown>
                 </div>
               </div>
             </div>

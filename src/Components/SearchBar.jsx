@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import Autosuggest from 'react-autosuggest';
-import './SearchBar.css'
-
+import React, { useState } from "react";
+import Autosuggest from "react-autosuggest";
+import "./SearchBar.css";
 
 const fetchSuggestions = async (value) => {
   const response = await fetch(`https://api.datamuse.com/sug?s=${value}`);
@@ -11,14 +10,10 @@ const fetchSuggestions = async (value) => {
 
 const getSuggestionValue = (suggestion) => suggestion.word;
 
-const renderSuggestion = (suggestion) => (
-  <div>
-    {suggestion.word}
-  </div>
-);
+const renderSuggestion = (suggestion) => <div>{suggestion.word}</div>;
 
 const SearchBar = () => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
 
   const onChange = (event, { newValue }) => {
@@ -35,17 +30,16 @@ const SearchBar = () => {
   };
 
   const inputProps = {
-    placeholder: 'Search the creative world at work',
+    placeholder: "Search the creative world at work",
     value,
     onChange,
     style: {
-        fontSize: '16px', 
-        width: '100%', 
-        border: 'none', 
-        outline: 'none', 
-        backgroundColor: '#f9f9f9',
-
-      },
+      fontSize: "16px",
+      width: "100%",
+      border: "none",
+      outline: "none",
+      backgroundColor: "#f9f9f9",
+    },
   };
 
   return (
@@ -59,11 +53,11 @@ const SearchBar = () => {
           renderSuggestion={renderSuggestion}
           inputProps={inputProps}
           theme={{
-            container: 'autosuggest-container',
-            suggestionsContainerOpen: 'suggestions-container--open',
-            suggestionsList: 'suggestions-list',
-            suggestion: 'suggestion',
-            suggestionHighlighted: 'suggestion-highlighted',
+            container: "autosuggest-container",
+            suggestionsContainerOpen: "suggestions-container--open",
+            suggestionsList: "suggestions-list",
+            suggestion: "suggestion",
+            suggestionHighlighted: "suggestion-highlighted",
           }}
         />
       </div>

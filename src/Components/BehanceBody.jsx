@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { behanceItem } from "../DataBehance";
 import { AiFillFolderOpen } from "react-icons/ai";
+import ProjectModal from "./ProjectModal.jsx";
 
 const BehanceBody = () => {
+  const [show, setShow] = useState(null);
+  const handleChange = () => {
+    setShow(null);
+  };
+
   return (
     <section>
       <div className="container-fluid px-4">
         <div className="grid md:grid-cols-3 lg:grid-cols-3  sm:grid-cols-2 gap-3 py-5">
           {behanceItem.map((item) => (
-            <div className="category-item cursor-pointer">
+            <div
+              className="category-item cursor-pointer"
+              onClick={() => setShow(item)}
+            >
               <div className="cat-img relative overflow-hidden rounded-md">
                 <div className="bg-overlay"></div>
                 <img src={item.featureImg} alt={item.featureImg} />
@@ -50,6 +59,7 @@ const BehanceBody = () => {
               </div>
             </div>
           ))}
+          {show && <ProjectModal item={show} onClose={handleChange} />}
         </div>
       </div>
     </section>
