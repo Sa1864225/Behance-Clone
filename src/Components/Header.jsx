@@ -35,27 +35,27 @@ const Header = () => {
           <ul className="">
             <li className="m-3 font-medium text-md">
               <a href="http://" target="_blank" rel="noopener noreferrer">
-                Fou you
-              </a>
-            </li>
-            <li className="m-3 font-medium text-md">
-              <a href="http://" target="_blank" rel="noopener noreferrer">
                 Discover
               </a>
             </li>
             <li className="m-3 font-medium text-md">
               <a href="http://" target="_blank" rel="noopener noreferrer">
-                Livestreams
-              </a>
-            </li>
-            <li className="m-3 font-medium text-md">
-              <a href="http://" target="_blank" rel="noopener noreferrer">
-                Hire
+                Assets
               </a>
             </li>
             <li className="m-3 font-medium text-md">
               <a href="http://" target="_blank" rel="noopener noreferrer">
                 Jobs
+              </a>
+            </li>
+            <li className="m-3 font-medium text-md">
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                Behance <span className="bg-blue-600  text-white py-0 px-2 rounded font-small text-sm h-1 bg-gradient-to-r from-blue-500 to-blue-800" >Pro</span>
+              </a>
+            </li>
+            <li className="m-3 font-medium text-md">
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                Hire Freelancers
               </a>
             </li>
           </ul>
@@ -117,7 +117,7 @@ const Header = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Behance <span>Pro</span>
+                          Behance <span className="bg-blue-600  text-white py-0 px-2 rounded font-small text-sm h-1 bg-gradient-to-r from-blue-500 to-blue-800" >PRO</span>
                         </a>
                         <span className="mx-3 text-gray-300 font-small text-xl">
                           {" "}
